@@ -1,0 +1,179 @@
+/* ============================================
+   SERVICES SECTION — Flip Card Layout
+   ============================================ */
+
+.services-flip {
+  background-color: var(--color-bg-light);
+  position: relative;
+  overflow: visible;
+}
+
+/* Top wave shape */
+.services-shape {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  line-height: 0;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.services-shape svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .services-shape {
+    top: -50px;
+  }
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+
+.title-accent {
+  color: var(--color-primary);
+}
+
+.services-subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--color-secondary);
+  margin-top: -30px;
+  margin-bottom: 50px;
+}
+
+.subtitle-accent {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+/* ============================================
+   3-COLUMN GRID
+   ============================================ */
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 20px;
+}
+
+@media (max-width: 992px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   FLIP CARD
+   ============================================ */
+
+.flip-card {
+  perspective: 1200px;
+  height: 300px;
+  width: 376px;
+  cursor: pointer;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* FRONT */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.flip-card-front {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  padding: 30px 20px 20px;
+}
+
+/* Per-card gradient color variants */
+.ser-box1 { background: linear-gradient(135deg, #ffffff, #ffffff); }
+.ser-box2 { background: linear-gradient(135deg, #ffffff, #ffffff); }
+.ser-box3 { background: linear-gradient(135deg, #ffffff, #ffffff); }
+.ser-box4 { background: linear-gradient(135deg, #ffffff, #ffffff); }
+.ser-box5 { background: linear-gradient(135deg, #ffffff, #ffffff); }
+.ser-box6 { background: linear-gradient(135deg, #ffffff, #ffffff); }
+
+.flip-card-img {
+  width: 192px;
+  height: 199px;
+  object-fit: contain;
+  border-radius: 12px;
+  margin-bottom: 18px;
+  /* filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.3)); */
+  transition: transform 0.4s ease;
+}
+
+.flip-card:hover .flip-card-img {
+  transform: scale(1.05);
+}
+
+.flip-card-front-title {
+  color: #275d6c;
+  font-size: 1.15rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+  letter-spacing: 0.3px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* BACK */
+.flip-card-back {
+  background: #ffffff;
+  transform: rotateY(180deg);
+  padding: 35px 30px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(39, 93, 108, 0.12);
+}
+
+.flip-card-back-title {
+  color: var(--color-primary);
+  font-size: 1rem;
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+  border-bottom: 3px solid var(--color-accent-light);
+}
+
+.flip-card-back-desc {
+  color: #4a5568;
+  font-size: 0.95rem;
+  line-height: 1.75;
+  text-align: center;
+}

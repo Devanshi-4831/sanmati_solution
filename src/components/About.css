@@ -1,0 +1,282 @@
+/* ============================================
+   ENTRANCE ANIMATION — scroll-triggered
+   ============================================ */
+
+/* Initial hidden state */
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-80px);
+  transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(80px);
+  transition: opacity 0.85s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.15s,
+              transform 0.85s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.15s;
+}
+
+/* Final visible state — added by IntersectionObserver */
+.reveal-left.animated,
+.reveal-right.animated {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ============================================
+   SECTION BASE
+   ============================================ */
+
+/* ============================================
+   DECORATIVE BACKGROUND IMAGE (in-des)
+   ============================================ */
+
+.about {
+  background-color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.in-des {
+  position: absolute;
+  top: 1px;
+  right: 0;
+  width: 209%;
+  max-width: 716px;
+  height: 768px;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.6;
+  animation: in-des-drift 8s ease-in-out infinite alternate;
+}
+
+.in-des-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+@keyframes in-des-drift {
+  0%   { transform: scale(1) translateY(0px) translateX(0px); }
+  33%  { transform: scale(1.04) translateY(-15px) translateX(8px); }
+  66%  { transform: scale(1.02) translateY(10px) translateX(-8px); }
+  100% { transform: scale(1.05) translateY(-8px) translateX(12px); }
+}
+
+@media (max-width: 992px) {
+  .in-des {
+    width: 100%;
+    max-width: 100%;
+    opacity: 1;
+  }
+}
+
+
+
+.about-wrapper {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* ============================================
+   CONTENT (LEFT SIDE)
+   ============================================ */
+
+.about-content .section-title::after {
+  left: 0;
+  transform: none;
+}
+
+.founder-msg {
+  background: var(--color-bg-light);
+  padding: 40px;
+  border-radius: 20px;
+  border-left: 6px solid var(--color-primary);
+  margin: 40px 0;
+  position: relative;
+}
+
+.founder-name {
+  color: var(--color-primary);
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+}
+
+.founder-title {
+  color: var(--color-secondary);
+  font-weight: 500;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.founder-quote {
+  font-style: italic;
+  color: #4a5568;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.company-stats {
+  display: flex;
+  gap: 40px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+.stat-label {
+  color: var(--color-secondary);
+  font-weight: 500;
+}
+
+/* ============================================
+   IMAGE (RIGHT SIDE) — Layered animations
+   ============================================ */
+
+.rs-animation-shape-image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 40px;
+}
+
+.pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0.6;
+}
+
+.middle-image {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 520px;
+}
+
+.middle-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 30px;
+  display: block;
+}
+
+.shape {
+  position: absolute;
+  bottom: -40px;
+  right: 20px;
+  z-index: 3;
+}
+
+.scale2 {
+  animation: scale2 10s linear infinite alternate;
+}
+
+@keyframes scale2 {
+  0%   { transform: scale(1); }
+  100% { transform: scale(1.05) translate(20px, 10px); }
+}
+
+.dance {
+  animation: dance 4s ease-in-out infinite;
+}
+
+@keyframes dance {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-30px) translateX(10px); }
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 992px) {
+  .about-wrapper {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  /* Stack: content on top, image below */
+  .about-content {
+    order: 1;
+  }
+
+  .about-visual {
+    order: 2;
+  }
+
+  .about-content .section-title {
+    text-align: center !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+
+  .about-content .section-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .company-stats {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .rs-animation-shape-image {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  /* On mobile: slide from bottom instead */
+  .reveal-left {
+    transform: translateY(60px);
+    transition: opacity 0.8s ease 0s, transform 0.8s ease 0s;
+  }
+
+  .reveal-right {
+    transform: translateY(60px);
+    transition: opacity 0.8s ease 0.2s, transform 0.8s ease 0.2s;
+  }
+
+  .reveal-left.animated,
+  .reveal-right.animated {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 576px) {
+  .company-stats {
+    gap: 20px;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .pattern img,
+  .shape img {
+    max-width: 120px;
+  }
+}
