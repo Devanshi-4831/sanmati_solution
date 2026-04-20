@@ -17,7 +17,7 @@
 }
 
 .footer-dark {
-  background-color: #3d3f41;
+  background-color: #275D6C;
   color: white;
   padding: 60px 0 30px 0;
   font-family: var(--font-main);
@@ -25,7 +25,7 @@
 
 .footer-row {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  grid-template-columns: 1fr 0.88fr 1fr 1fr;
   gap: 40px;
   margin-bottom: 50px;
 }

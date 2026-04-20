@@ -8,7 +8,7 @@ const Footer = () => {
     <div className="footer-wrapper">
       <div className="footer-wave-transition">
         <svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
-          <path fill="#3d3f41" fillOpacity="1" d="M0,160L48,176C96,192,192,224,288,213.3C384,202.7,480,149.3,576,144C672,138.7,768,181.3,864,181.3C960,181.3,1056,138.7,1152,122.7C1248,106.7,1344,117.3,1392,122.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+          <path fill="#275D6C" fillOpacity="1" d="M0,160L48,176C96,192,192,224,288,213.3C384,202.7,480,149.3,576,144C672,138.7,768,181.3,864,181.3C960,181.3,1056,138.7,1152,122.7C1248,106.7,1344,117.3,1392,122.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
         </svg>
       </div>
       
@@ -18,7 +18,7 @@ const Footer = () => {
             {/* Column 1: Brand */}
             <div className="footer-col brand-col">
               <div className="footer-logo">
-                <img src={logo} alt="Sanmati Solution" className="footer-logo-img white-filter" />
+                <img src={logo} alt="Sanmati Solution" className="footer-logo-img " />
               </div>
               <ul className="footer-contact-links">
                 <li className="bold-link"><span className="quote-trigger">Instant Free Quote</span></li>
