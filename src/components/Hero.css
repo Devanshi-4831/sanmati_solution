@@ -1,11 +1,62 @@
 .hero {
   position: relative;
-  min-height: 110vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   background-color: var(--color-primary);
   overflow: hidden;
-  padding-top: 80px;
+  padding-top: 160px;
+  /* Increased to clear the Navbar logo */
+  padding-bottom: 140px;
+  /* Kept to clear the bottom SVG shape */
+  scroll-snap-align: start;
+}
+
+/* ============================================
+   BOTTOM SHAPE ANIMATION
+   ============================================ */
+.shape-image-animation {
+  position: absolute;
+
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  line-height: 0;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.shape-image-animation svg {
+  width: 100%;
+  height: 120px;
+  display: block;
+}
+
+/* Helper Utilities */
+.bottom-0 {
+  bottom: 0 !important;
+}
+
+.p-0 {
+  padding: 0 !important;
+}
+
+.w-100 {
+  width: 100% !important;
+}
+
+@media (max-width: 768px) {
+
+  /* Match the d-none d-md-block logic */
+  .d-md-block {
+    display: none !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .d-md-block {
+    display: block !important;
+  }
 }
 
 .hero-background {
@@ -78,6 +129,7 @@
 
 .hero-content {
   color: white;
+
 }
 
 .hero-badge {
@@ -159,7 +211,8 @@
 
 .hero-visual {
   position: relative;
-  height: 500px;
+  height: 420px;
+  /* Reduced from 500px to ensure it fits with the new padding */
   display: flex;
   align-items: center;
   justify-content: center;

@@ -11,6 +11,7 @@ const Hero = () => {
         <div className="blob blob-3"></div>
       </div>
 
+
       <div className="container hero-container">
         <div className="hero-content">
           <div className="hero-badge">Welcome to Sanmati Solution</div>
@@ -59,6 +60,23 @@ const Hero = () => {
           </div>
         </div>
       </div>
+
+      {/* ✅ Shape moved INSIDE section */}
+      <div className="shape-image-animation">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 180 2500 200" preserveAspectRatio="none">
+          <path fill="#f1f5f9">
+            <animate
+              attributeName="d"
+              dur="5s"
+              values="M 0 250 C 1200 400 1200 50 3000 250 L 3000 550 L 0 550 L 0 250;
+                  M 0 250 C 400 50 400 400 3000 250 L 3000 550 L 0 550 L 0 250;
+                  M 0 250 C 1200 400 1200 50 3000 250 L 3000 550 L 0 550 L 0 250"
+              repeatCount="indefinite"
+            />
+          </path>
+        </svg>
+      </div>
+
     </section>
   );
 };

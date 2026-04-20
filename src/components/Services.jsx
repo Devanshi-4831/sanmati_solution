@@ -6,7 +6,7 @@ import webImg from '../assets/services1/Web Development-.png';
 import mobileImg from '../assets/services1/mobile-app-1.png';
 import reactImg from '../assets/services1/e-commerce.png';
 import cloudImg from '../assets/services1/SEO.png';
-import fullstackImg from '../assets/services1/Testing 3d-compressed.jpg';
+import fullstackImg from '../assets/services1/Testing 3d-compressed.png';
 import uiuxImg from '../assets/services1/graphic-design.png';
 
 const services = [
@@ -64,7 +64,7 @@ const Services = () => {
   return (
     <section id="services" className="services-flip section-padding">
       {/* Animated wave shape at the top */}
-      <div className="services-shape">
+      {/* <div className="services-shape">
         <svg xmlns="http://www.w3.org/2000/svg" width="3000" height="400" viewBox="0 180 2500 200" fill="#f1f5f9">
           <path d="M 0 250 C 1200 400 1200 50 3000 250 L 3000 550 L 0 550 L 0 250">
             <animate
@@ -77,10 +77,10 @@ const Services = () => {
             />
           </path>
         </svg>
-      </div>
+      </div> */}
 
       <div className="container">
-        <h2 className="section-title" data-subtitle="What We Do">
+        <h2 className="section-title" >
           <span className="title-accent">OUR SERVICES</span>
         </h2>
         <p className="services-subtitle">
