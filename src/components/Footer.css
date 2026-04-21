@@ -6,20 +6,19 @@
 .footer-wave-transition {
   width: 100%;
   line-height: 0;
-  margin-bottom: -122px; /* Avoid tiny gap */
+  margin-bottom: -1px; /* Avoid tiny gap */
 }
 
 .footer-wave-transition svg {
   display: block;
   width: 100%;
-  /* height: 476px;  */
-  /* Precise height for the subtle wave */
+  height: 120px;
 }
 
 .footer-dark {
   background-color: #275D6C;
   color: white;
-  padding: 60px 0 30px 0;
+  padding: 0px 0 30px 0;
   font-family: var(--font-main);
 }
 
@@ -38,10 +37,27 @@
   text-transform: none;
 }
 
-.footer-logo-img {
-  height: 55px;
-  width: auto;
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
   margin-bottom: 25px;
+}
+
+.footer-logo-img {
+  height: 50px;
+  width: auto;
+}
+
+.footer-logo-text {
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+  text-transform: lowercase;
+  font-family: var(--font-logo);
+
 }
 
 .white-filter {
@@ -119,7 +135,7 @@
   color: #d1d1d1;
   font-size: 0.9rem;
   line-height: 1.5;
-  text-align: right;
+  text-align: left;
   max-width: 250px;
 }
 
@@ -198,6 +214,23 @@
   font-size: 0.85rem;
 }
 
+.footer-map-container {
+  width: 100%;
+  max-width: 250px;
+  height: 150px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  margin-top: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.footer-map-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
 @media (max-width: 1024px) {
   .footer-row {
     grid-template-columns: 1fr 1fr;
@@ -211,17 +244,31 @@
   }
 }
 
+@media (max-width: 768px) {
+  /* No special margin needed now that height is fixed to 120px */
+}
+
 @media (max-width: 640px) {
   .footer-row {
     grid-template-columns: 1fr;
     text-align: center;
+    gap: 30px;
   }
   
   .footer-logo,
   .footer-contact-links,
   .social-links-row,
-  .trust-badge-boxes {
+  .trust-badge-boxes,
+  .contact-item,
+  .footer-map-container {
     justify-content: center;
     align-items: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer-logo-img {
+    height: 45px;
   }
 }

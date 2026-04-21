@@ -13,11 +13,15 @@
   --color-bg-dark: #0f172a;
   --color-bg-light: #f1f5f9;
 
+
   --font-main: 'Inter', sans-serif;
+  --font-logo: 'Outfit', 'Poppins', sans-serif;
+
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --shadow-lg: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 * {
@@ -25,6 +29,13 @@
   margin: 0;
   padding: 0;
   font-family: var(--font-main);
+}
+
+@media (min-width: 1024px) {
+  html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+  }
 }
 
 html {
@@ -65,11 +76,16 @@ ul {
   max-width: 1240px;
   margin: 0 auto;
   padding: 0 24px;
+  position: relative;
+  z-index: 2;
 }
 
 .section-padding {
-  padding: 90px 0;
+  padding: 75px 0;
+  position: relative;
 }
+
+
 
 @media (max-width: 768px) {
   .section-padding {
@@ -86,7 +102,8 @@ ul {
   left: 50%;
   transform: translateX(-50%);
   color: var(--color-primary);
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
+  text-shadow: 0 4px 15px rgba(39, 93, 108, 0.15);
 }
 
 .section-title::before {
@@ -138,6 +155,12 @@ ul {
   height: 5px;
   background: linear-gradient(90deg, var(--color-primary), var(--color-accent-light));
   border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(39, 93, 108, 0.4);
+  transition: width 0.4s ease;
+}
+
+.section-title:hover::after {
+  width: 100px;
 }
 
 .btn {
@@ -156,10 +179,11 @@ ul {
 .btn-primary {
   background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
   color: white !important;
-  box-shadow: 0 10px 15px -3px rgba(39, 93, 108, 0.3);
+  box-shadow: 0 8px 20px -4px rgba(39, 93, 108, 0.35);
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 20px 25px -5px rgba(39, 93, 108, 0.4);
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 20px 30px -5px rgba(39, 93, 108, 0.5);
 }

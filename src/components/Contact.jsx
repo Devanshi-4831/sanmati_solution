@@ -14,7 +14,7 @@ const Contact = () => {
   return (
     <section id="contact" className="contact section-padding">
       <div className="container">
-        <h2 className="section-title" data-subtitle="Contact Us">Get In Touch</h2>
+        <h2 className="section-title" >Get In Touch</h2>
 
         <div className="contact-wrapper">
           <div className="contact-info">
@@ -50,7 +50,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4>Email</h4>
-                  <p>hello@sanmatisolution.com</p>
+                  <p>sanmatisolution@gmail.com</p>
                 </div>
               </div>
             </div>

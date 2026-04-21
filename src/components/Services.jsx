@@ -15,7 +15,7 @@ const services = [
     title: 'Web Development',
     backTitle: 'WEB DEVELOPMENT',
     description:
-      'Websites are the face of a brand, and a well-designed and developed website is essential to make your business stand out. We offer the best web design and development services, including redesign and revamp services.',
+      'Build fast, secure, and scalable websites tailored to your business needs. We create responsive designs with modern technologies for seamless user experience.',
     colorClass: 'ser-box1',
   },
   {
@@ -23,15 +23,15 @@ const services = [
     title: 'Mobile App Development',
     backTitle: 'MOBILE APP DEVELOPMENT',
     description:
-      'The world is on a mobile screen. Thus, having a mobile app for your business is not just a luxury, it\'s a necessity. We offer both Android and iOS app development and ensure that our services bring the best results.',
-    colorClass: 'ser-box2',
+      'Develop powerful mobile apps for Android and iOS platforms. We deliver smooth, user-friendly, and high-performance applications.', 
+colorClass: 'ser-box2',
   },
   {
     image: reactImg,
     title: 'E-commerce Solutions',
     backTitle: 'E-commerce Solutions',
     description:
-      'Maximize your user engagement with our modern React-based frontend solutions. We build fast, scalable, and beautiful interfaces that convert visitors into loyal customers.',
+      'Launch and grow your online store with smart e-commerce solutions. We provide secure, scalable, and conversion-focused platforms.',
     colorClass: 'ser-box3',
   },
   {
@@ -39,7 +39,7 @@ const services = [
     title: 'Cloud Services',
     backTitle: 'CLOUD Services',
     description:
-      'Achieve top performance and reliability with our cloud infrastructure services. We help businesses migrate, scale, and optimize on AWS, Azure, and GCP.',
+      'Leverage cloud technology for better scalability and performance. We offer secure cloud deployment, migration, and management solutions.',
     colorClass: 'ser-box4',
   },
   {
@@ -47,7 +47,7 @@ const services = [
     title: 'IT Support & Maintenance',
     backTitle: 'IT Support & Maintenance',
     description:
-      'We specialize in end-to-end software development to meet our clients\' specific needs. Our solutions are designed to improve productivity and efficiency across the entire technology stack.',
+      'Ensure your systems run smoothly with reliable IT support services. We provide 24/7 monitoring, troubleshooting, and maintenance.',
     colorClass: 'ser-box5',
   },
   {
@@ -55,7 +55,7 @@ const services = [
     title: 'UI/UX Design',
     backTitle: 'UI/UX DESIGN & SOLUTIONS',
     description:
-      'We create visually appealing designs that connect with your customers and bring your ideas to life without losing its main objectives. Let us help market your business effectively.',
+      'Design visually appealing and user-friendly digital experiences. We focus on intuitive interfaces that enhance user engagement.',
     colorClass: 'ser-box6',
   },
 ];

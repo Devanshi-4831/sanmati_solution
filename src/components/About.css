@@ -38,6 +38,24 @@
   overflow: hidden;
 }
 
+.about::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background-image:
+    linear-gradient(to right, var(--color-primary) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--color-primary) 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.06;
+  mask-image: radial-gradient(circle at center, black 0%, transparent 80%);
+  -webkit-mask-image: radial-gradient(circle at center, black 0%, transparent 80%);
+  z-index: 0;
+}
+
 .in-des {
   position: absolute;
   top: 1px;
@@ -80,7 +98,17 @@
   .in-des {
     width: 100%;
     max-width: 100%;
-    opacity: 1;
+    opacity: 0.3;
+    /* Reduced opacity on mobile for better text contrast */
+    right: -20%;
+    /* Shift slightly to avoid covering text */
+  }
+}
+
+@media (max-width: 768px) {
+  .in-des {
+    display: none;
+    /* Hide decorative background on very small screens to avoid clutter */
   }
 }
 
