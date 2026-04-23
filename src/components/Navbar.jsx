@@ -26,10 +26,10 @@ const Navbar = () => {
         </a>
 
         <div className={`nav-links ${mobileMenuOpen ? 'active' : ''}`}>
-          <a href="#home" onClick={() => setMobileMenuOpen(false)}>Home</a>
-          <a href="#services" onClick={() => setMobileMenuOpen(false)}>Services</a>
-          <a href="#about" onClick={() => setMobileMenuOpen(false)}>About</a>
-          <a href="#contact" className="nav-contact-btn" onClick={() => setMobileMenuOpen(false)}>
+          <a href="/#home" onClick={() => setMobileMenuOpen(false)}>Home</a>
+          <a href="/services" onClick={() => setMobileMenuOpen(false)}>Services</a>
+          <a href="/about" onClick={() => setMobileMenuOpen(false)}>About</a>
+          <a href="/#contact" className="nav-contact-btn" onClick={() => setMobileMenuOpen(false)}>
             Contact Us
           </a>
         </div>
