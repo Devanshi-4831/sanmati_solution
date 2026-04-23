@@ -1,7 +1,7 @@
 import React from 'react';
 import './Services.css';
 
-// Import all service images from assets/services
+// Original homepage images
 import webImg from '../assets/services1/Web Development-.png';
 import mobileImg from '../assets/services1/mobile-app-1.png';
 import reactImg from '../assets/services1/e-commerce.png';
@@ -14,48 +14,42 @@ const services = [
     image: webImg,
     title: 'Web Development',
     backTitle: 'WEB DEVELOPMENT',
-    description:
-      'Build fast, secure, and scalable websites tailored to your business needs. We create responsive designs with modern technologies for seamless user experience.',
+    description: 'Build fast, secure, and scalable websites tailored to your business needs. We create responsive designs with modern technologies for seamless user experience.',
     colorClass: 'ser-box1',
   },
   {
     image: mobileImg,
     title: 'Mobile App Development',
     backTitle: 'MOBILE APP DEVELOPMENT',
-    description:
-      'Develop powerful mobile apps for Android and iOS platforms. We deliver smooth, user-friendly, and high-performance applications.', 
-colorClass: 'ser-box2',
+    description: 'Develop powerful mobile apps for Android and iOS platforms. We deliver smooth, user-friendly, and high-performance applications.',
+    colorClass: 'ser-box2',
   },
   {
     image: reactImg,
     title: 'E-commerce Solutions',
-    backTitle: 'E-commerce Solutions',
-    description:
-      'Launch and grow your online store with smart e-commerce solutions. We provide secure, scalable, and conversion-focused platforms.',
+    backTitle: 'E-COMMERCE SOLUTIONS',
+    description: 'Launch and grow your online store with smart e-commerce solutions. We provide secure, scalable, and conversion-focused platforms.',
     colorClass: 'ser-box3',
   },
   {
     image: cloudImg,
     title: 'Cloud Services',
-    backTitle: 'CLOUD Services',
-    description:
-      'Leverage cloud technology for better scalability and performance. We offer secure cloud deployment, migration, and management solutions.',
+    backTitle: 'CLOUD SERVICES',
+    description: 'Leverage cloud technology for better scalability and performance. We offer secure cloud deployment, migration, and management solutions.',
     colorClass: 'ser-box4',
   },
   {
     image: fullstackImg,
     title: 'IT Support & Maintenance',
-    backTitle: 'IT Support & Maintenance',
-    description:
-      'Ensure your systems run smoothly with reliable IT support services. We provide 24/7 monitoring, troubleshooting, and maintenance.',
+    backTitle: 'IT SUPPORT & MAINTENANCE',
+    description: 'Ensure your systems run smoothly with reliable IT support services. We provide 24/7 monitoring, troubleshooting, and maintenance.',
     colorClass: 'ser-box5',
   },
   {
     image: uiuxImg,
     title: 'UI/UX Design',
     backTitle: 'UI/UX DESIGN & SOLUTIONS',
-    description:
-      'Design visually appealing and user-friendly digital experiences. We focus on intuitive interfaces that enhance user engagement.',
+    description: 'Design visually appealing and user-friendly digital experiences. We focus on intuitive interfaces that enhance user engagement.',
     colorClass: 'ser-box6',
   },
 ];
@@ -63,24 +57,8 @@ colorClass: 'ser-box2',
 const Services = () => {
   return (
     <section id="services" className="services-flip section-padding">
-      {/* Animated wave shape at the top */}
-      {/* <div className="services-shape">
-        <svg xmlns="http://www.w3.org/2000/svg" width="3000" height="400" viewBox="0 180 2500 200" fill="#f1f5f9">
-          <path d="M 0 250 C 1200 400 1200 50 3000 250 L 3000 550 L 0 550 L 0 250">
-            <animate
-              attributeName="d"
-              dur="5s"
-              values="M 0 250 C 1200 400 1200 50 3000 250 L 3000 550 L 0 550 L 0 250;
-                      M 0 250 C 400 50 400 400 3000 250 L 3000 550 L 0 550 L 0 250;
-                      M 0 250 C 1200 400 1200 50 3000 250 L 3000 550 L 0 550 L 0 250"
-              repeatCount="indefinite"
-            />
-          </path>
-        </svg>
-      </div> */}
-
       <div className="container">
-        <h2 className="section-title" >
+        <h2 className="section-title">
           <span className="title-accent">OUR SERVICES</span>
         </h2>
         <p className="services-subtitle">
@@ -101,7 +79,6 @@ const Services = () => {
                   />
                   <p className="flip-card-front-title">{service.title}</p>
                 </div>
-
                 {/* Back */}
                 <div className="flip-card-back">
                   <h4 className="flip-card-back-title">{service.backTitle}</h4>

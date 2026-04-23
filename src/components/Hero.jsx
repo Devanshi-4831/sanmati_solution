@@ -64,7 +64,7 @@ const Hero = () => {
       {/* ✅ Shape moved INSIDE section */}
       <div className="shape-image-animation">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 180 2500 200" preserveAspectRatio="none">
-          <path fill="#f1f5f9">
+          <path fill="#f7f7f7">
             <animate
               attributeName="d"
               dur="5s"

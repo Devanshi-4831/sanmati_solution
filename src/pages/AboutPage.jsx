@@ -6,7 +6,7 @@ import {
 } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import heroBg from '../assets/about/hero-bg.png';
+import heroBg from '../assets/services/aboutus.png';
 import processImg from '../assets/about/process.png';
 import aboutImg from '../assets/services/about.png';
 import './AboutPage.css';
@@ -241,9 +241,7 @@ const AboutPage = () => {
       <section className="ap-process">
         {/* top wave */}
         <div className="ap-wave-top">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 180 2500 200" fill="#f1f5f9" preserveAspectRatio="none">
-            <path d="M 0 250 C 1200 400 1200 50 3000 250 L 3000 0 L 0 0 L 0 250" />
-          </svg>
+
         </div>
 
         <div className="ap-container">

@@ -4,66 +4,60 @@ import Footer from '../components/Footer';
 import { Megaphone, ArrowRight } from 'lucide-react';
 import './ServicesPage.css';
 
-// Importing images
-import heroBg from '../assets/services1/web-development.jpg';
-import mobileImg from '../assets/services/mobile.png';
-import reactImg from '../assets/services/react.png';
-import flutterImg from '../assets/services/flutter.png';
-import webImg from '../assets/services/web.png';
-import cloudImg from '../assets/services/cloud.png';
-import fullstackImg from '../assets/services/fullstack.png';
-import uiuxImg from '../assets/services/uiux.png';
+import heroBg from '../assets/services/services.png';
 
+// Same images as homepage services section
+import webImg from '../assets/services1/Web Development-.png';
+import mobileImg from '../assets/services1/mobile-app-1.png';
+import ecommerceImg from '../assets/services1/e-commerce.png';
+import cloudImg from '../assets/services1/SEO.png';
+import supportImg from '../assets/services1/Testing 3d-compressed.png';
+import uiuxImg from '../assets/services1/graphic-design.png';
+
+// Same content as homepage services section
 const servicesData = [
   {
-    title: 'Mobile App Development',
-    subtitle: 'Android & iOS Application',
-    image: mobileImg,
-    badge: 'Mobile Apps',
-    link: '#',
-  },
-  {
-    title: 'React & React-Native',
-    subtitle: 'Js,Node.js, MERN Stack.',
-    image: reactImg,
-    badge: 'React-Native',
-    link: '#',
-  },
-  {
-    title: 'Flutter & Flutter Flow',
-    subtitle: 'Flutter,Flutter-Flow,Dart.',
-    image: flutterImg,
-    badge: 'Flutter',
-    link: '#',
-  },
-  {
-    title: 'Web & API',
-    subtitle: 'Python, Django, Flask, DynamoDB, Web API etc.',
+    title: 'Web Development',
+    subtitle: 'Build fast, secure, and scalable websites tailored to your business needs.',
     image: webImg,
-    badge: 'Web Development',
+    badge: 'Web',
     link: '#',
   },
   {
-    title: 'Cloud & AWS',
-    subtitle: 'AWS Consulting & Security, Cloud & Database Migration, Manage Cloud Services.',
+    title: 'Mobile App Development',
+    subtitle: 'Develop powerful mobile apps for Android and iOS platforms.',
+    image: mobileImg,
+    badge: 'Mobile',
+    link: '/mobileappdevelopment',
+  },
+  {
+    title: 'E-commerce Solutions',
+    subtitle: 'Launch and grow your online store with smart e-commerce solutions.',
+    image: ecommerceImg,
+    badge: 'E-commerce',
+    link: '#',
+  },
+  {
+    title: 'Cloud Services',
+    subtitle: 'Leverage cloud technology for better scalability and performance.',
     image: cloudImg,
-    badge: 'Cloud&AWS',
+    badge: 'Cloud',
     link: '#',
   },
   {
-    title: 'Full-Stack Development',
-    subtitle: 'Full Stack Development',
-    image: fullstackImg,
-    badge: 'Full-Stack',
+    title: 'IT Support & Maintenance',
+    subtitle: 'Ensure your systems run smoothly with reliable IT support services.',
+    image: supportImg,
+    badge: 'IT Support',
     link: '#',
   },
   {
-    title: 'UI/UX & Graphics Design',
-    subtitle: 'Figma, Seketch, Adobe Photoshop.',
+    title: 'UI/UX Design',
+    subtitle: 'Design visually appealing and user-friendly digital experiences.',
     image: uiuxImg,
-    badge: 'UI/UX Design',
+    badge: 'UI/UX',
     link: '#',
-  }
+  },
 ];
 
 const ServicesPage = () => {
@@ -81,7 +75,7 @@ const ServicesPage = () => {
           style={{ backgroundImage: `url(${heroBg})` }}
         >
           <div className="shape-image-animation">
-            <svg xmlns="http://www.w3.org/2000/svg" width="3000" height="400" viewBox="0 180 2500 200" fill="#f0f2f8">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 180 2500 200" fill="#F7F7F7" preserveAspectRatio="none">
               <path d="M 0 250 C 1200 400 1200 50 3000 250 L 3000 550 L 0 550 L 0 250">
                 <animate
                   attributeName="d"
@@ -97,50 +91,40 @@ const ServicesPage = () => {
           <div className="container h-100">
             <div className="services-hero-content">
               <div className="services-hero-text">
-                <span className="badge-pill">
+                <span className="badge-pill-primary">
                   <Megaphone size={16} className="badge-icon" />
-                  World class business services
+                  WORLD CLASS BUSINESS SERVICES
                 </span>
-                <h1 className="services-title">Services</h1>
+                <h1 className="services-title">services</h1>
               </div>
             </div>
           </div>
         </section>
 
         {/* Services Grid Section */}
-        <section className="services-grid-section position-relative">
+        <section className="services-grid-section">
           <div className="container">
             <div className="services-page-grid">
               {servicesData.map((service, index) => (
-                <div className="services-box-style-03" key={index}>
-                  <div className="services-box-img-wrapper position-relative">
-                    <a href={service.link}>
-                      <img src={service.image} alt={service.title} />
-                    </a>
-                    <a href={service.link} className="services-badge">
-                      {service.badge}
-                    </a>
+                <div className="sp-card" key={index}>
+                  {/* Image area */}
+                  <div className="sp-card-img-wrap">
+                    <img src={service.image} alt={service.title} className="sp-card-img" />
+                    <a href={service.link} className="sp-badge">{service.badge}</a>
                   </div>
-                  <div className="services-box-content bg-white">
-                    <div className="services-box-text text-center">
-                      <a href={service.link} className="services-box-title">
-                        {service.title}
-                      </a>
-                      <p>{service.subtitle}</p>
-                    </div>
-                    <div className="services-box-footer text-center">
-                      <a href={service.link} className="explore-btn">
-                        <span className="btn-text">Explore More</span>
-                        <ArrowRight size={16} className="btn-icon" />
-                      </a>
-                    </div>
+                  {/* Content area */}
+                  <div className="sp-card-body">
+                    <a href={service.link} className="sp-card-title">{service.title}</a>
+                    <p className="sp-card-sub">{service.subtitle}</p>
+                    <div className="sp-divider"></div>
+                    <a href={service.link} className="sp-explore-link">
+                      Explore More <ArrowRight size={15} className="sp-arrow" />
+                    </a>
                   </div>
                 </div>
               ))}
             </div>
           </div>
-
-
         </section>
       </div>
       <Footer />

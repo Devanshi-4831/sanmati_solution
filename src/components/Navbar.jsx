@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Link } from 'lucide-react';
+import { Link as RouterLink } from 'react-router-dom';
 import logo from '../assets/sanmati_solution_logo.png';
 import './Navbar.css';
 
@@ -19,19 +20,19 @@ const Navbar = () => {
   return (
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container nav-container">
-        <a href="#home" className="nav-logo">
+        <RouterLink to="/" className="nav-logo">
           <div className="logo-image-container">
             <img src={logo} alt="Sanmati Solution" className="nav-logo-img" />
           </div>
-        </a>
+        </RouterLink>
 
         <div className={`nav-links ${mobileMenuOpen ? 'active' : ''}`}>
-          <a href="/#home" onClick={() => setMobileMenuOpen(false)}>Home</a>
-          <a href="/services" onClick={() => setMobileMenuOpen(false)}>Services</a>
-          <a href="/about" onClick={() => setMobileMenuOpen(false)}>About</a>
-          <a href="/#contact" className="nav-contact-btn" onClick={() => setMobileMenuOpen(false)}>
+          <RouterLink to="/" onClick={() => setMobileMenuOpen(false)}>Home</RouterLink>
+          <RouterLink to="/services" onClick={() => setMobileMenuOpen(false)}>Services</RouterLink>
+          <RouterLink to="/about" onClick={() => setMobileMenuOpen(false)}>About</RouterLink>
+          <RouterLink to="/contact" className="nav-contact-btn" onClick={() => setMobileMenuOpen(false)}>
             Contact Us
-          </a>
+          </RouterLink>
         </div>
 
         <button className="mobile-menu-btn" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>

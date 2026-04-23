@@ -8,6 +8,8 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import AboutPage from './pages/AboutPage';
 import ServicesPage from './pages/ServicesPage';
+import MobileAppDevelopment from './pages/MobileAppDevelopment';
+import ContactPage from './pages/ContactPage';
 
 function HomePage() {
   return (
@@ -31,6 +33,8 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/services" element={<ServicesPage />} />
+        <Route path="/mobileappdevelopment" element={<MobileAppDevelopment />} />
+        <Route path="/contact" element={<ContactPage />} />
       </Routes>
     </Router>
   );
