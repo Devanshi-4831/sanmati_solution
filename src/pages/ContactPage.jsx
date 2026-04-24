@@ -141,7 +141,7 @@ const ContactPage = () => {
 
               <div className="actual-form-side reveal-right" ref={addToRefs}>
                 <h2 className="form-side-title">Looking for any help?</h2>
-                <form className="adite-style-form">
+                <form className="sanmati-contact-form">
                   <div className="input-group-v2">
                     <label>ENTER YOUR NAME*</label>
                     <input type="text" placeholder="What's your good name" required />

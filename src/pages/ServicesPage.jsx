@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import { Link } from 'react-router-dom';
 import { Megaphone, ArrowRight } from 'lucide-react';
 import './ServicesPage.css';
 
@@ -21,42 +22,42 @@ const servicesData = [
     subtitle: 'Build fast, secure, and scalable websites tailored to your business needs.',
     image: webImg,
     badge: 'Web',
-    link: '#',
+    link: '/services/web-development',
   },
   {
     title: 'Mobile App Development',
     subtitle: 'Develop powerful mobile apps for Android and iOS platforms.',
     image: mobileImg,
     badge: 'Mobile',
-    link: '/mobileappdevelopment',
+    link: '/services/mobile-app-development',
   },
   {
     title: 'E-commerce Solutions',
     subtitle: 'Launch and grow your online store with smart e-commerce solutions.',
     image: ecommerceImg,
     badge: 'E-commerce',
-    link: '#',
+    link: '/services/e-commerce-solutions',
   },
   {
     title: 'Cloud Services',
     subtitle: 'Leverage cloud technology for better scalability and performance.',
     image: cloudImg,
     badge: 'Cloud',
-    link: '#',
+    link: '/services/cloud-services',
   },
   {
     title: 'IT Support & Maintenance',
     subtitle: 'Ensure your systems run smoothly with reliable IT support services.',
     image: supportImg,
     badge: 'IT Support',
-    link: '#',
+    link: '/services/it-support',
   },
   {
     title: 'UI/UX Design',
     subtitle: 'Design visually appealing and user-friendly digital experiences.',
     image: uiuxImg,
     badge: 'UI/UX',
-    link: '#',
+    link: '/services/ui-ux-design',
   },
 ];
 
@@ -110,16 +111,16 @@ const ServicesPage = () => {
                   {/* Image area */}
                   <div className="sp-card-img-wrap">
                     <img src={service.image} alt={service.title} className="sp-card-img" />
-                    <a href={service.link} className="sp-badge">{service.badge}</a>
+                    <Link to={service.link} className="sp-badge">{service.badge}</Link>
                   </div>
                   {/* Content area */}
                   <div className="sp-card-body">
-                    <a href={service.link} className="sp-card-title">{service.title}</a>
+                    <Link to={service.link} className="sp-card-title">{service.title}</Link>
                     <p className="sp-card-sub">{service.subtitle}</p>
                     <div className="sp-divider"></div>
-                    <a href={service.link} className="sp-explore-link">
+                    <Link to={service.link} className="sp-explore-link">
                       Explore More <ArrowRight size={15} className="sp-arrow" />
-                    </a>
+                    </Link>
                   </div>
                 </div>
               ))}

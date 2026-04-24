@@ -4,7 +4,7 @@ import { Link as RouterLink } from 'react-router-dom';
 import logo from '../assets/sanmati_solution_logo.png';
 import './Navbar.css';
 
-const Navbar = () => {
+const Navbar = ({ darkText = false }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -18,7 +18,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
+    <nav className={`navbar ${isScrolled ? 'scrolled' : ''} ${darkText ? 'nav-dark-text' : ''}`}>
       <div className="container nav-container">
         <RouterLink to="/" className="nav-logo">
           <div className="logo-image-container">

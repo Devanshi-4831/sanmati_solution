@@ -126,8 +126,12 @@
 }
 
 /* All color variants - white */
-.ser-box1, .ser-box2, .ser-box3,
-.ser-box4, .ser-box5, .ser-box6 {
+.ser-box1,
+.ser-box2,
+.ser-box3,
+.ser-box4,
+.ser-box5,
+.ser-box6 {
   background: #ffffff;
 }
 
@@ -171,7 +175,7 @@
   letter-spacing: 1px;
   margin-bottom: 18px;
   padding-bottom: 14px;
-  border-bottom: 3px solid rgba(255,255,255,0.3);
+  border-bottom: 3px solid rgba(255, 255, 255, 0.3);
 }
 
 .flip-card-back-desc {

@@ -175,7 +175,8 @@
 
   .float-card-1,
   .float-card-2 {
-    display: none; /* Hide cluttered floating cards on mobile */
+    display: none;
+    /* Hide cluttered floating cards on mobile */
   }
 
   .main-card {

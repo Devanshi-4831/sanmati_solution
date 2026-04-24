@@ -1,4 +1,4 @@
-import React from 'react';
+import { Link as RouterLink } from 'react-router-dom';
 import './Services.css';
 
 // Original homepage images
@@ -14,43 +14,49 @@ const services = [
     image: webImg,
     title: 'Web Development',
     backTitle: 'WEB DEVELOPMENT',
-    description: 'Build fast, secure, and scalable websites tailored to your business needs. We create responsive designs with modern technologies for seamless user experience.',
+    description: 'Build fast, secure, and scalable websites tailored to your business needs.',
     colorClass: 'ser-box1',
+    link: '/services/web-development',
   },
   {
     image: mobileImg,
     title: 'Mobile App Development',
     backTitle: 'MOBILE APP DEVELOPMENT',
-    description: 'Develop powerful mobile apps for Android and iOS platforms. We deliver smooth, user-friendly, and high-performance applications.',
+    description: 'Develop powerful mobile apps for Android and iOS platforms.',
     colorClass: 'ser-box2',
+    link: '/services/mobile-app-development',
   },
   {
     image: reactImg,
     title: 'E-commerce Solutions',
     backTitle: 'E-COMMERCE SOLUTIONS',
-    description: 'Launch and grow your online store with smart e-commerce solutions. We provide secure, scalable, and conversion-focused platforms.',
+    description: 'Launch and grow your online store with smart e-commerce solutions.',
     colorClass: 'ser-box3',
+    link: '/services/e-commerce-solutions',
   },
   {
     image: cloudImg,
     title: 'Cloud Services',
     backTitle: 'CLOUD SERVICES',
-    description: 'Leverage cloud technology for better scalability and performance. We offer secure cloud deployment, migration, and management solutions.',
+    description: 'Leverage cloud technology for better scalability and performance.',
     colorClass: 'ser-box4',
+    link: '/services/cloud-services',
   },
   {
     image: fullstackImg,
     title: 'IT Support & Maintenance',
     backTitle: 'IT SUPPORT & MAINTENANCE',
-    description: 'Ensure your systems run smoothly with reliable IT support services. We provide 24/7 monitoring, troubleshooting, and maintenance.',
+    description: 'Ensure your systems run smoothly with reliable IT support services.',
     colorClass: 'ser-box5',
+    link: '/services/it-support',
   },
   {
     image: uiuxImg,
     title: 'UI/UX Design',
     backTitle: 'UI/UX DESIGN & SOLUTIONS',
-    description: 'Design visually appealing and user-friendly digital experiences. We focus on intuitive interfaces that enhance user engagement.',
+    description: 'Design visually appealing and user-friendly digital experiences.',
     colorClass: 'ser-box6',
+    link: '/services/ui-ux-design',
   },
 ];
 
@@ -80,10 +86,10 @@ const Services = () => {
                   <p className="flip-card-front-title">{service.title}</p>
                 </div>
                 {/* Back */}
-                <div className="flip-card-back">
+                <RouterLink to={service.link} className="flip-card-back">
                   <h4 className="flip-card-back-title">{service.backTitle}</h4>
                   <p className="flip-card-back-desc">{service.description}</p>
-                </div>
+                </RouterLink>
               </div>
             </div>
           ))}

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Linkedin, Facebook, Instagram, Mail, Briefcase, Quote, MapPin, Phone } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import logo from '../assets/sanmati_solution.png';
 import './Footer.css';
 
@@ -36,9 +37,9 @@ const Footer = () => {
             <div className="footer-col links-col">
               <h4>Quick Links</h4>
               <ul>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact Us</a></li>
+                <li><Link to="/about">About Us</Link></li>
+                <li><Link to="/services">Services</Link></li>
+                <li><Link to="/contact">Contact Us</Link></li>
 
               </ul>
             </div>
@@ -47,12 +48,12 @@ const Footer = () => {
             <div className="footer-col services-col">
               <h4>Our Services</h4>
               <ul>
-                <li><a href="#mobile">Mobile App Development</a></li>
-                <li><a href="#web">Web Development</a></li>
-                <li><a href="#uiux">UI/UX Design</a></li>
-                <li><a href="#graphics">IT Support & Maintenance </a></li>
-                <li><a href="#dedicated">Cloud Services</a></li>
-                <li><a href="#ai">E-Commerce Solution</a></li>
+                <li><Link to="/services/mobile-app-development">Mobile App Development</Link></li>
+                <li><Link to="/services/web-development">Web Development</Link></li>
+                <li><Link to="/services/ui-ux-design">UI/UX Design</Link></li>
+                <li><Link to="/services/it-support">IT Support & Maintenance</Link></li>
+                <li><Link to="/services/cloud-services">Cloud Services</Link></li>
+                <li><Link to="/services/e-commerce-solutions">E-Commerce Solution</Link></li>
               </ul>
             </div>
 
