@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Code2, Smartphone } from 'lucide-react';
 import './Hero.css';
 
@@ -23,12 +24,12 @@ const Hero = () => {
             We are a team dedicated to building innovative, reliable, and scalable digital solutions. We transform your ideas into impactful products through cutting-edge technology.
           </p>
           <div className="hero-cta-group">
-            <a href="#services" className="btn btn-primary">
+            <Link to="/services" className="btn btn-primary">
               Our Services <ArrowRight size={20} />
-            </a>
-            <a href="#contact" className="btn btn-secondary">
+            </Link>
+            <Link to="/contact" className="btn btn-secondary">
               Let's Talk
-            </a>
+            </Link>
           </div>
         </div>
 
