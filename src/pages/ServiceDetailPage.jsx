@@ -188,56 +188,58 @@ const ServiceDetailPage = () => {
     {
       id: 'web-development',
       img: webImg,
-      badge: 'Web Development',
-      title: 'Web & API Development',
-      desc: 'Python, Django, Flask, DynamoDB, Web API etc.',
+      badge: 'Web',
+      title: 'Web Development',
+      desc: 'Build fast, secure, and scalable websites tailored to your business needs.',
       to: '/services/web-development'
     },
     {
       id: 'mobile-app-development',
       img: mobileImg,
-      badge: 'Mobile Apps',
-      title: 'Android & iOS Apps',
-      desc: 'Native and Cross-platform mobile solutions.',
+      badge: 'Mobile',
+      title: 'Mobile App Development',
+      desc: 'Develop powerful mobile apps for Android and iOS platforms.',
       to: '/services/mobile-app-development'
     },
     {
       id: 'e-commerce-solutions',
       img: ecommerceImg,
       badge: 'E-commerce',
-      title: 'Online Storefronts',
-      desc: 'Secure and scalable shopping experiences.',
+      title: 'E-commerce Solutions',
+      desc: 'Launch and grow your online store with smart e-commerce solutions.',
       to: '/services/e-commerce-solutions'
     },
     {
       id: 'cloud-services',
       img: cloudImg,
-      badge: 'Cloud & AWS',
-      title: 'Cloud Infrastructure',
-      desc: 'Optimized cloud deployment and management.',
+      badge: 'Cloud',
+      title: 'Cloud Services',
+      desc: 'Leverage cloud technology for better scalability and performance.',
       to: '/services/cloud-services'
     },
     {
       id: 'it-support',
       img: supportImg,
       badge: 'IT Support',
-      title: 'Maintenance & Support',
-      desc: '24/7 monitoring and technical reliability.',
+      title: 'IT Support & Maintenance',
+      desc: 'Ensure your systems run smoothly with reliable IT support services.',
       to: '/services/it-support'
     },
     {
       id: 'ui-ux-design',
       img: uiuxImg,
-      badge: 'UI/UX Design',
-      title: 'Creative UI/UX',
-      desc: 'User-centric designs that drive engagement.',
+      badge: 'UI/UX',
+      title: 'UI/UX Design',
+      desc: 'Design visually appealing and user-friendly digital experiences.',
       to: '/services/ui-ux-design'
     }
   ];
 
-  // Filter out the current service and take 3 others
+
+  // Filter out the current service, shuffle randomly, and take 3 others
   const valueServices = allValueServices
     .filter(svc => svc.id !== serviceId)
+    .sort(() => 0.5 - Math.random())
     .slice(0, 3);
 
   return (
@@ -258,7 +260,7 @@ const ServiceDetailPage = () => {
             </div>
           </div>
           <div className="mad-wave-wrap">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 180 2500 200" fill="#ffffffff" preserveAspectRatio="none">
+            <svg xmlns="http://www.w3.org/2000/svg" className="mad-wave-svg" viewBox="0 180 2500 200" fill="#ffffffff" preserveAspectRatio="none">
               <path>
                 <animate attributeName="d" dur="5s"
                   values="M 0 250 C 1200 400 1200 50 3000 250 L 3000 550 L 0 550 L 0 250;
@@ -279,7 +281,7 @@ const ServiceDetailPage = () => {
                   <img src={data.aboutImg} alt={data.aboutTitle} />
                   <div className="mad-float-badge mad-float-anim">
                     <div className="mad-float-badge-inner">
-                      <span className="mad-float-num">11</span>
+                      <span className="mad-float-num">4</span>
                       <span className="mad-float-label">Years of<br />experience</span>
                     </div>
                     <div className="mad-float-circle" />
@@ -375,12 +377,7 @@ const ServiceDetailPage = () => {
               ))}
             </div>
           </div>
-          <div className="mad-value-wave">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 80" preserveAspectRatio="none">
-              <path d="M0,40 C480,90 960,-10 1440,40 L1440,80 L0,80 Z" fill="#ffffff" opacity="0.6" />
-              <path d="M0,55 C360,5 1080,95 1440,55 L1440,80 L0,80 Z" fill="#ffffff" opacity="0.4" />
-            </svg>
-          </div>
+         
         </section>
 
       </div>

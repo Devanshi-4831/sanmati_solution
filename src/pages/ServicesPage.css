@@ -21,7 +21,8 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55);
+  /* White gradient at top for logo visibility, transitions to dark for text contrast */
+  background: linear-gradient(to bottom, rgb(255 255 255) 0%, rgb(255 255 255 / 77%) 20%, rgb(255 255 255 / 41%) 50%, rgb(0 0 0 / 41%) 100%);
 }
 
 .services-hero-content {
@@ -84,6 +85,16 @@
   display: block;
 }
 
+/* Tablet optimization for the wave animation (e.g. iPad Air 820x1180) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .shape-image-animation {
+    bottom: -25px;
+  }
+  .shape-image-animation svg {
+    height: 80px;
+  }
+}
+
 /* ── Grid Section ────────── */
 .services-grid-section {
   padding: 120px 0 100px;
@@ -143,7 +154,7 @@
   height: 100%;
   object-fit: contain;
   transition: transform 0.5s ease;
-  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.08));
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.08));
 }
 
 .sp-card:hover .sp-card-img {
@@ -248,10 +259,28 @@
     grid-template-columns: 1fr;
     gap: 20px;
   }
+
   .services-title {
     font-size: 3rem;
   }
+
   .sp-card-img-wrap {
     height: 200px;
+  }
+}
+
+@media (max-width: 576px) {
+  .services-hero {
+    padding-top: 140px;
+    padding-bottom: 100px;
+  }
+
+  .services-title {
+    font-size: 2.2rem;
+  }
+
+  .badge-pill-primary {
+    padding: 6px 18px;
+    font-size: 11px;
   }
 }
