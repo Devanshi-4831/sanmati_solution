@@ -6,7 +6,8 @@
 .footer-wave-transition {
   width: 100%;
   line-height: 0;
-  margin-bottom: -1px; /* Avoid tiny gap */
+  margin-bottom: -2px; /* Avoid tiny gap */
+
 }
 
 .footer-wave-transition svg {

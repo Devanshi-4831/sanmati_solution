@@ -130,7 +130,7 @@ const MobileAppDevelopment = () => {
 
           {/* Animated bottom wave */}
           <div className="mad-wave-wrap">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 180 2500 200" fill="#ffffffff" preserveAspectRatio="none">
+            <svg xmlns="http://www.w3.org/2000/svg" className="mad-wave-svg" viewBox="0 180 2500 200" fill="#ffffffff" preserveAspectRatio="none">
               <path>
                 <animate attributeName="d" dur="5s"
                   values="M 0 250 C 1200 400 1200 50 3000 250 L 3000 550 L 0 550 L 0 250;
@@ -156,7 +156,7 @@ const MobileAppDevelopment = () => {
 
                   <div className="mad-float-badge mad-float-anim">
                     <div className="mad-float-badge-inner">
-                      <span className="mad-float-num">11</span>
+                      <span className="mad-float-num">4</span>
                       <span className="mad-float-label">Years of<br />experience</span>
                     </div>
                     <div className="mad-float-circle" />
