@@ -68,7 +68,7 @@ const ServicesPage = () => {
 
   return (
     <>
-      <Navbar />
+      <Navbar darkText={true} />
       <div className="page-layout">
         {/* Hero Section */}
         <section

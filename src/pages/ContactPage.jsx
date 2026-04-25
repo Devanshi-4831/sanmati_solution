@@ -38,7 +38,7 @@ const ContactPage = () => {
 
   return (
     <>
-      <Navbar />
+      <Navbar darkText={true} />
       <div className="contact-page">
         {/* Hero Section */}
         <section
@@ -100,10 +100,10 @@ const ContactPage = () => {
                   <div className="card-body-v2">
                     <h4 className="city-title">Vapi, IN</h4>
                     <p className="full-address">A/321, Sun Trade Center, Near Gujarat Gas, Char Rasta, Vapi - 396195, Gujarat 396191, IN</p>
-                    <a href="#" className="map-link">View on map</a>
+                    <a href="https://maps.google.com/?q=Sun+Trade+Center+Vapi+Gujarat" target="_blank" rel="noopener noreferrer" className="map-link">View on map</a>
                     <div className="card-email">
                       <Mail size={14} className="me-2 icon-primary" />
-                      <span>sanmatisolution@gmail.com</span>
+                      <span><a href="mailto:sanmatisolution@gmail.com" style={{ color: 'inherit', textDecoration: 'none' }}>sanmatisolution@gmail.com</a></span>
                     </div>
                   </div>
                 </div>
@@ -126,15 +126,12 @@ const ContactPage = () => {
                 <div className="support-details">
                   <div className="support-detail-item">
                     <span className="detail-label">Need support?</span>
-                    <p className="detail-value">sanmatisolution@gmail.com</p>
+                    <p className="detail-value"><a href="mailto:sanmatisolution@gmail.com" style={{ color: 'inherit', textDecoration: 'none' }}>sanmatisolution@gmail.com</a></p>
                   </div>
-                  <div className="support-detail-item">
-                    <span className="detail-label">Join growing team?</span>
-                    <p className="detail-value">sanmatisolution@gmail.com</p>
-                  </div>
+                  
                   <div className="support-detail-item">
                     <span className="detail-label">Visit headquarters?</span>
-                    <a href="#" className="detail-link">View on google map</a>
+                    <a href="https://maps.google.com/?q=Sun+Trade+Center+Vapi+Gujarat" target="_blank" rel="noopener noreferrer" className="detail-link">View on google map</a>
                   </div>
                 </div>
               </div>
@@ -151,8 +148,14 @@ const ContactPage = () => {
                     <input type="email" placeholder="Enter your email address" required />
                   </div>
                   <div className="input-group-v2">
-                    <label>MOBILE NO*</label>
-                    <input type="tel" placeholder="Enter Your Mobile No" required />
+                    <label>SERVICE INTERESTED IN*</label>
+                    <select required defaultValue="">
+                      <option value="" disabled>Select a service</option>
+                      <option value="web">Website Development</option>
+                      <option value="app">Mobile App Development</option>
+                      <option value="software">Custom Software</option>
+                      <option value="other">Other</option>
+                    </select>
                   </div>
                   <div className="input-group-v2">
                     <label>YOUR MESSAGE</label>
