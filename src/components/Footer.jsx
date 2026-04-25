@@ -28,7 +28,7 @@ const Footer = () => {
               </div>
               <ul className="footer-contact-links">
                 <li className="bold-link"><span className="quote-trigger">Need support?</span></li>
-                <li><a href="mailto:inquiry@sanmatisolution.com">sanmatisolution@gmail.com</a></li>
+                <li><a href="mailto:sanmatisolution@gmail.com">sanmatisolution@gmail.com</a></li>
 
               </ul>
             </div>
@@ -60,9 +60,9 @@ const Footer = () => {
             {/* Column 4: Social & Trust */}
             <div className="footer-col social-trust-col">
               <div className="social-links-row">
-                <a href="#"><Facebook size={24} /></a>
-                <a href="#"><Linkedin size={24} /></a>
-                <a href="#"><Instagram size={24} /></a>
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><Facebook size={24} /></a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><Linkedin size={24} /></a>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><Instagram size={24} /></a>
               </div>
 
               <div className="footer-contact-info">

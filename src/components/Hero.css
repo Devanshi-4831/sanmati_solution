@@ -32,6 +32,16 @@
   display: block;
 }
 
+/* Tablet optimization for the wave animation (e.g. iPad Air 820x1180) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .shape-image-animation {
+    bottom: -25px;
+  }
+  .shape-image-animation svg {
+    height: 80px;
+  }
+}
+
 /* Helper Utilities */
 .bottom-0 {
   bottom: 0 !important;
@@ -402,11 +412,36 @@
 }
 
 @media (max-width: 576px) {
+  .hero {
+    padding-top: 100px;
+    padding-bottom: 60px;
+  }
+
   .hero-title {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
+    line-height: 1.3;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 25px;
   }
 
   .hero-cta-group {
     flex-direction: column;
+    gap: 15px;
   }
-}
+
+  .btn {
+    width: 100%;
+  }
+
+  .hero-visual {
+    height: 300px;
+    margin-top: 30px;
+  }
+
+  .main-card {
+    height: 250px;
+  }
+}

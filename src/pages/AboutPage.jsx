@@ -91,7 +91,7 @@ const AboutPage = () => {
 
   return (
     <>
-      <Navbar />
+      <Navbar darkText={true} />
 
       {/* ═══════════════════════════════════════════
           SECTION 1 — HERO BANNER
@@ -99,7 +99,7 @@ const AboutPage = () => {
       <section className="ap-hero" style={{ backgroundImage: `url(${heroBg})` }}>
         {/* animated wave */}
         <div className="ap-wave-bottom">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 180 2500 200" fill="#f1f5f9" preserveAspectRatio="none">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 180 2500 200" fill="#f7f7f7" preserveAspectRatio="none">
             <path>
               <animate attributeName="d" dur="5s"
                 values="M 0 250 C 1200 400 1200 50 3000 250 L 3000 550 L 0 550 L 0 250;
@@ -170,8 +170,8 @@ const AboutPage = () => {
               </div>
 
               <div className="ap-cta-row">
-                <Link to="/#services" className="ap-btn ap-btn-primary">Explore Services</Link>
-                <Link to="/#contact" className="ap-btn ap-btn-link">
+                <Link to="/services" className="ap-btn ap-btn-primary">Explore Services</Link>
+                <Link to="/contact" className="ap-btn ap-btn-link">
                   <Mail size={16} /> Quick Contact
                 </Link>
               </div>
@@ -183,7 +183,7 @@ const AboutPage = () => {
             <Mail size={22} />
             <span>
               Save your precious time and effort spent for finding a solution.{' '}
-              <Link to="/#contact" className="ap-inline-link">Contact us now</Link>
+              <Link to="/contact" className="ap-inline-link">Contact us now</Link>
             </span>
           </div>
         </div>
@@ -194,28 +194,26 @@ const AboutPage = () => {
       ═══════════════════════════════════════════ */}
       <section className="ap-image-strip">
         <div className="ap-strip-track">
-          {/* We'll show "stage" cards representing our workflow */}
-          {['Analysis', 'Design', 'Development', 'Testing', 'Evolution', 'Success', 'Growth'].map((stage, i) => (
-            <div className="ap-strip-card" key={i}>
-              <div className="ap-strip-card-inner">
+          <div className="ap-strip-group">
+            {['Analysis', 'Design', 'Development', 'Testing', 'Evolution', 'Success', 'Growth'].map((stage, i) => (
+              <div className="ap-strip-card" key={i}>
                 <div className={`ap-strip-icon-bg color-${i % 5}`}>
                   {['🔍', '🎨', '💻', '🧪', '🚀', '✅', '📈'][i]}
                 </div>
                 <span>{stage}</span>
               </div>
-            </div>
-          ))}
-          {/* duplicate for infinite loop */}
-          {['Analysis', 'Design', 'Development', 'Testing', 'Evolution', 'Success', 'Growth'].map((stage, i) => (
-            <div className="ap-strip-card" key={`dup-${i}`} aria-hidden="true">
-              <div className="ap-strip-card-inner">
+            ))}
+          </div>
+          <div className="ap-strip-group" aria-hidden="true">
+            {['Analysis', 'Design', 'Development', 'Testing', 'Evolution', 'Success', 'Growth'].map((stage, i) => (
+              <div className="ap-strip-card" key={`dup-${i}`}>
                 <div className={`ap-strip-icon-bg color-${i % 5}`}>
                   {['🔍', '🎨', '💻', '🧪', '🚀', '✅', '📈'][i]}
                 </div>
                 <span>{stage}</span>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 
@@ -277,7 +275,7 @@ const AboutPage = () => {
               <div className="ap-process-img-wrap">
                 <img src={processImg} alt="Creative Process" className="ap-process-img" />
                 <div className="ap-process-badge glass-badge">
-                  <span className="ap-exp-number">11<sup>+</sup></span>
+                  <span className="ap-exp-number">4<sup>+</sup></span>
                   <span className="ap-exp-text">Years working experience</span>
                 </div>
               </div>
